@@ -9,7 +9,7 @@ import { Flex, Box, Button, Text, Textarea, Image, Spinner, Grid, Input, Checkbo
 import { Container, Col, Row } from 'react-bootstrap'
 
 import Dropbox from "react-select"
-import DropboxCss from "./select"
+// import DropboxCss from "./select"
 
 
 
@@ -17,6 +17,86 @@ let App
 
 // ---------------------------------------------------------------------
 // ---------------------------------------------------------------------
+
+const filtro1 = {
+  container: (base, state) => ({
+    ...base,
+    border: state.isFocused ? null : null
+  }),
+  control: (base, state) => ({
+    ...base,
+    background: "slategrey",
+    fontFamily: "Arial",
+    fontSize: 12
+  }),
+  menu: base => ({
+    ...base,
+    fontFamily: "Arial"
+  }),
+
+  singleValue: base => ({
+    ...base,
+    color: "lightgrey"
+  }),
+
+  valueContainer: (base, state) => ({
+    ...base,
+    background: "slategrey",
+    color: "red"
+  }),
+  multiValue: (base, state) => ({
+    ...base,
+    background: "lightYellow",
+    maxWidth: "100px"
+  })
+}
+
+const filtro2 = {
+  container: (base, state) => ({
+    ...base,
+    border: state.isFocused ? null : null
+  }),
+  control: (base, state) => ({
+    ...base,
+    background: "lightgrey",
+    fontFamily: "Arial",
+    fontSize: 12
+  }),
+  menu: base => ({
+    ...base,
+    fontFamily: "Arial"
+  }),
+
+  singleValue: base => ({
+    ...base,
+    color: "slategrey"
+  }),
+
+  valueContainer: (base, state) => ({
+    ...base,
+    background: "lightgrey",
+    color: "red"
+  }),
+  multiValue: (base, state) => ({
+    ...base,
+    background: "lightYellow",
+    maxWidth: "100px"
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Body = props => {
   const Estilo = useThemeUI().theme.styles
@@ -197,7 +277,7 @@ const ModuloSimple  = () => {
             <Dropbox
               name="Categoria"
               isSearchable={false}
-              styles={DropboxCss.filtro2}
+              styles={filtro2}
               value={{value: Detalle.Categoria, label: Detalle.Categoria}}
               options={props.useContext.Categorias[0]}
               onChange={async e => { setDetalle({ ...Detalle, "Categoria": e.value }) }} 
@@ -212,7 +292,7 @@ const ModuloSimple  = () => {
             <Dropbox
               name="Categoria"
               isSearchable={false}
-              styles={DropboxCss.filtro2}
+              styles={filtro2}
               value={{value: Detalle.Estado, label: Detalle.Estado}}
               options={props.useContext.Estados[0]}
               onChange={async e => { setDetalle({ ...Detalle, "Estado": e.value }) }} 
@@ -227,7 +307,7 @@ const ModuloSimple  = () => {
             <Dropbox
               name="Categoria"
               isSearchable={false}
-              styles={DropboxCss.filtro2}
+              styles={filtro2}
               value={{value: Detalle.Empleados, label: Detalle.Empleados}}
               options={props.useContext.Empleados[0]}
               onChange={async e => { setDetalle({ ...Detalle, "Empleados": e.value }) }} 
