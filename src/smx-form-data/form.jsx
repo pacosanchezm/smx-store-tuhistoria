@@ -187,7 +187,7 @@ const ModuloSimple  = () => {
         </Row>
 
         <Row style={{marginBottom: "10px"}}>
-          <Col xs={3}> <Text sx={Estilo.label1} >Sitio Web</Text> </Col>
+          <Col xs={3}> <Text sx={Estilo.label1} >Sitio Web / Redes</Text> </Col>
           <Col xs={9}> <Input sx={Estilo.input1} {...useChangeArray(Detalle, "Web", setDetalle)}/> </Col>
         </Row>
 
@@ -237,6 +237,38 @@ const ModuloSimple  = () => {
 
 
       </Container>
+
+
+      <Box sx={{ height: 13,  }} />
+      <Row>
+        <Text sx={{...Estilo.msecc2, textAlign: "left"}}>{"Cuéntanos acerca de tu emprendimiento"}</Text>
+      </Row>
+
+
+      <Row>
+        <Text sx={Estilo.d2s} >¿Cómo nació?, ¿cuántos fundadores tiene? ¿a qué se dedican? ¿cual es el factor que lo diferencia del resto? y todos los datos que describan a tu emprendimiento.</Text>
+      </Row>
+
+
+
+
+      <Container fluid 
+        style={{ width: "100%", bg: "white", borderRadius: "10px", borderStyle: "solid", borderWidth:1, borderColor: "#9999", paddingTop: "10px"}}
+      >
+        <Row style={{marginBottom: "10px"}}>
+
+          <Col xs={12}> 
+            <Textarea
+              // sx={Estilo.input1}
+              {...useChangeArray(Detalle, "Descripcion", setDetalle)}
+              rows={5}
+            />          
+          </Col>
+        </Row>
+
+      </Container>
+
+
 
 
       <Box sx={{ height: 13,  }} />
@@ -307,27 +339,10 @@ const ModuloSimple  = () => {
 
       </Container>
 
-      <Box sx={{ height: 13,  }} />
-      <Row>
-        <Text sx={{...Estilo.msecc2, textAlign: "left"}}>{"Cuéntanos acerca de tu emprendimiento"}</Text>
-      </Row>
 
 
-      <Container fluid 
-        style={{ width: "100%", bg: "white", borderRadius: "10px", borderStyle: "solid", borderWidth:1, borderColor: "#9999", paddingTop: "10px"}}
-      >
-        <Row style={{marginBottom: "10px"}}>
 
-          <Col xs={12}> 
-            <Textarea
-              // sx={Estilo.input1}
-              {...useChangeArray(Detalle, "Descripcion", setDetalle)}
-              rows={5}
-            />          
-          </Col>
-        </Row>
 
-      </Container>
 
       <Box css={{ height: 21 }} />
 
