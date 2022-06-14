@@ -231,10 +231,10 @@ const ModuloSimple  = () => {
           <Col xs={9}> <Input sx={Estilo.input1} {...useChangeArray(Detalle, "Nombre", setDetalle)}/> </Col>
         </Row>
 
-        <Row style={{marginBottom: "10px"}}>
+        {/* <Row style={{marginBottom: "10px"}}>
           <Col xs={3}> <Text sx={Estilo.label1} >Apellidos</Text> </Col>
           <Col xs={9}> <Input sx={Estilo.input1} {...useChangeArray(Detalle, "Apellido", setDetalle)}/> </Col>
-        </Row>
+        </Row> */}
 
         <Row style={{marginBottom: "10px"}}>
           <Col xs={3}> <Text sx={Estilo.label1} >Teléfono</Text> </Col>
@@ -271,7 +271,7 @@ const ModuloSimple  = () => {
           <Col xs={9}> <Input sx={Estilo.input1} {...useChangeArray(Detalle, "Web", setDetalle)}/> </Col>
         </Row>
 
-        <Row style={{marginBottom: "10px"}}>
+        {/* <Row style={{marginBottom: "10px"}}>
           <Col xs={3}> <Text sx={Estilo.label1} >Categoría</Text> </Col>
           <Col xs={9}> 
             <Dropbox
@@ -283,7 +283,7 @@ const ModuloSimple  = () => {
               onChange={async e => { setDetalle({ ...Detalle, "Categoria": e.value }) }} 
             />
           </Col>
-        </Row>
+        </Row> */}
 
 
         <Row style={{marginBottom: "10px"}}>
@@ -301,7 +301,7 @@ const ModuloSimple  = () => {
         </Row>
 
 
-        <Row style={{marginBottom: "10px"}}>
+        {/* <Row style={{marginBottom: "10px"}}>
           <Col xs={3}> <Text sx={Estilo.label1} >Empleados</Text> </Col>
           <Col xs={9}> 
             <Dropbox
@@ -313,7 +313,7 @@ const ModuloSimple  = () => {
               onChange={async e => { setDetalle({ ...Detalle, "Empleados": e.value }) }} 
             />
           </Col>
-        </Row>
+        </Row> */}
 
 
       </Container>
@@ -349,7 +349,7 @@ const ModuloSimple  = () => {
       </Container>
 
 
-
+{/* 
 
       <Box sx={{ height: 13,  }} />
 
@@ -419,7 +419,7 @@ const ModuloSimple  = () => {
 
       </Container>
 
-
+ */}
 
 
 
